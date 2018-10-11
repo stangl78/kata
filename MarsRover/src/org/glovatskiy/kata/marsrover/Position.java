@@ -32,10 +32,8 @@ public class Position {
 
 
     public Position(String[] args) {
-
         this.x = args == null ? 0 : args[0] == null ? 0 : Integer.parseInt(args[0]);
         this.y = args == null ? 0 : args[1] == null ? 0 : Integer.parseInt(args[1]);
-
         this.direction = Direction.valueOf(String.valueOf(args[2]).trim());
     }
 
@@ -46,9 +44,4 @@ public class Position {
 
     }
 
-    public Position(Integer x, Integer y, Direction direction) {
-        this.x = x;
-        this.y = y;
-        this.direction = direction;
-    }
 }

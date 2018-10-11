@@ -11,16 +11,16 @@ public class RoverControl {
         Position initPosition = new Position(args);
         Rover rover = new Rover(initPosition);
         Scanner sc = new Scanner(System.in);
-            while (true) {
-                while ( sc.hasNextLine()){
-                    String line = sc.nextLine();
-                    Communication.say("Got command Sequence:" + line +". Roger");
-                    String[] commands = line.split("(?!^)");
-                    for (String stringCommand : commands) {
-                        Command command = CommandDispatcher.getCommand(stringCommand);
-                        command.executeOnRover(rover);
-                    }
+        while (true) {
+            while (sc.hasNextLine()) {
+                String line = sc.nextLine();
+                Communication.say("Got command Sequence:" + line + ". Roger");
+                String[] commands = line.split("(?!^)");
+                for (String stringCommand : commands) {
+                    Command command = CommandDispatcher.getCommand(stringCommand);
+                    command.executeOnRover(rover);
                 }
             }
+        }
     }
 }

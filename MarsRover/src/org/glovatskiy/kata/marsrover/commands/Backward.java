@@ -6,11 +6,19 @@ public class Backward extends AbstractMoveCommand {
 
     protected Position calculateNewPosition(Position position) {
         Position newPosition = new Position(position);
-        switch (position.getDirection()){
-            case N: newPosition.setY(position.getY()-1); break;
-            case S: newPosition.setY(position.getY()+1); break;
-            case E: newPosition.setX(position.getX()-1); break;
-            case W: newPosition.setX(position.getX()+1); break;
+        switch (position.getDirection()) {
+            case N:
+                newPosition.setY(position.getY() - 1);
+                break;
+            case S:
+                newPosition.setY(position.getY() + 1);
+                break;
+            case E:
+                newPosition.setX(position.getX() - 1);
+                break;
+            case W:
+                newPosition.setX(position.getX() + 1);
+                break;
             default:
         }
         return newPosition;

@@ -2,21 +2,17 @@ package org.glovatskiy.kata.marsrover;
 
 public class Rover {
 
+    Position position;
+
     public Position getPosition() {
         return position;
     }
-
-    public void setPosition(Position position) {
-        this.position = position;
-    }
-
-    Position position;
 
     public Rover(Position position) {
         this.position = position;
     }
 
-    public void moveTo(Position position){
+    public void moveTo(Position position) {
         this.position = position;
     }
 
